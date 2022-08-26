@@ -32,6 +32,10 @@ public class UI {
 
 	// https://stackoverflow.com/questions/2979383/java-clear-the-console
 	
+	public static void clearScreen() {
+		System.out.println("\033[H\033[2J");
+		System.out.flush();
+	}
 	public static ChessPosition readChessPosition(Scanner sc) {
 		try {
 			String s = sc.nextLine();
@@ -41,7 +45,6 @@ public class UI {
 		}catch (RuntimeException e) {
 			throw new InputMismatchException("Error readin ChessPositiuon. Valid values are from a1 to h8.");
 		}
-		
 	}
 	
 	public static void printBoard(ChessPiece[][] pieces) {

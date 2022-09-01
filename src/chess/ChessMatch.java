@@ -95,7 +95,7 @@ public class ChessMatch {
 		placeNewPiece('e', 8, new King(board, Color.BLACK));
 		
 		for (int i = 0; i < board.getColumns(); i ++) {
-			placeNewPiece((char) ('a' + i), 2, new Bishop(board, Color.WHITE));
+			placeNewPiece((char) ('a' + i), 2, new Knight(board, Color.WHITE));
 		}
 		
 		for (int i = 0; i < board.getColumns(); i ++) {
